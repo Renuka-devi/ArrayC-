@@ -12,47 +12,42 @@ namespace ConsoleApp1
         {
 
             //Search vowels from a given character array
+
+            Console.WriteLine("Search vowels from a given character array");
             string[] characters = { "a", "v", "i", "s" };
+            string[] vowels = new string[characters.Length];
+            int index = 0;
             foreach (string i in characters)
             {
                 switch(i)
                 {
                     case "a":
-                        if(i == "a")
-                        {
-                            string[] vowels = { i };
-                            Console.WriteLine("vowel is " +vowels);
-                        }
-                        break;
                     case "i":
-                        if (i == "i")
-                        {
-                            string[] vowels = { i };
-                        }
-                        break;
                     case "e":
-                        if (i == "e")
-                        {
-                            string[] vowels = { i };
-                        }
-                        break;
                     case "o":
-                        if (i == "o")
-                        {
-                            string[] vowels = { i };
-                        }
-                        break;
                     case "u":
-                        if (i == "u")
-                        {
-                            string[] vowels = { i };
-                        }
+                        vowels[index] = i;
+                        index++;
                         break;
                     default:
                         break;
                 }
             }
-            
+            foreach (string vowel in vowels)
+            {
+                Console.WriteLine(vowel);
+            }
+
+            // Get the count of positive and negative number count from an array
+            Console.WriteLine("Get the count of positive and negative number count from an array");
+            Class1.getPositiveNegativeNumbers();
+
+            //Sort an array
+
+            Console.WriteLine("Array sorting");
+            Class1.arraySorting();
+            Class1.arrayComparison();
+
         }
     }
 }
