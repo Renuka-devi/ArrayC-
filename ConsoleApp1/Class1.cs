@@ -95,5 +95,13 @@ namespace ConsoleApp1
             }
             return "String is not palindrom";
         }
+
+        public int countOfWord()
+        {
+            Console.WriteLine("Hello I am RENUKA");
+            string sentence = "Hello I am RENUKA";
+            string [] splittedArray = sentence.Split(' ');
+            return splittedArray.Length;
+        }
     }
 }

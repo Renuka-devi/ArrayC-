@@ -54,6 +54,10 @@ namespace ConsoleApp1
 
             Class1 obj = new Class1();
             Console.WriteLine(obj.checkPalindrom());
+
+            // Count the number of words in a sentance.
+
+            Console.WriteLine("Words Count is " + obj.countOfWord()); 
         }
     }
 }
