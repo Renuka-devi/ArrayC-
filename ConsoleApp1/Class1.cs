@@ -13,12 +13,13 @@ namespace ConsoleApp1
             int[] numbers = { 2, 8, 6, -5, 4, -36 };
             int positiveCount = 0;
             int negativeCount = 0;
-            foreach(int num in numbers)
+            foreach (int num in numbers)
             {
-                if(num < 0)
+                if (num < 0)
                 {
                     negativeCount = negativeCount + 1;
-                } else
+                }
+                else
                 {
                     positiveCount = positiveCount + 1;
                 }
@@ -31,7 +32,7 @@ namespace ConsoleApp1
         {
             int[] numbers = { 8, 1, 5, 7, 3, 2, 7 };
             Array.Sort(numbers);
-            foreach(int sortedArray in numbers)
+            foreach (int sortedArray in numbers)
             {
                 Console.WriteLine(sortedArray);
             }
@@ -41,12 +42,12 @@ namespace ConsoleApp1
         {
             //read an array from console
 
-            
+
             //int size = 5;
             int[] firstArray = new int[5];
             int[] secondArray = new int[5];
             Console.WriteLine("Enter 5 numbers for array A");
-            for(int i=0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 firstArray[i] = int.Parse(Console.ReadLine());
             }
@@ -68,15 +69,17 @@ namespace ConsoleApp1
                         break;
                     }
                 }
-            } else
+            }
+            else
             {
                 areEqual = false;
             }
 
-            if(areEqual == true)
+            if (areEqual == true)
             {
                 Console.WriteLine("array's are equal");
-            } else
+            }
+            else
             {
                 Console.WriteLine("array's are not equal");
             }
@@ -89,7 +92,7 @@ namespace ConsoleApp1
             char[] characterArray = newString.ToCharArray();
             Array.Reverse(characterArray);
             String ReversedString = new string(characterArray);
-            if(newString == ReversedString)
+            if (newString == ReversedString)
             {
                 return "String is palindrom";
             }
@@ -100,8 +103,26 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Hello I am RENUKA");
             string sentence = "Hello I am RENUKA";
-            string [] splittedArray = sentence.Split(' ');
+            string[] splittedArray = sentence.Split(' ');
             return splittedArray.Length;
+        }
+
+        public static void unquieOfString()
+        {
+            Console.WriteLine("Enter a String");
+            string newString1 = Convert.ToString(Console.ReadLine());
+            char [] newArray = newString1.ToCharArray();
+            // Create a HashSet using HashSet class
+            HashSet<char> uniqueHashSet = new HashSet<char>();
+            foreach (char x in newArray)
+            {
+                uniqueHashSet.Add(x);
+            }
+
+            foreach (var val in uniqueHashSet)
+            {
+                Console.WriteLine(val);
+            }
         }
     }
 }

@@ -57,7 +57,11 @@ namespace ConsoleApp1
 
             // Count the number of words in a sentance.
 
-            Console.WriteLine("Words Count is " + obj.countOfWord()); 
+            Console.WriteLine("Words Count is " + obj.countOfWord());
+
+            //get unqiue characters of a string
+
+            Class1.unquieOfString();
         }
     }
 }
