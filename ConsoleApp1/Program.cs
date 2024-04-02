@@ -19,7 +19,7 @@ namespace ConsoleApp1
             int index = 0;
             foreach (string i in characters)
             {
-                switch(i)
+                switch (i)
                 {
                     case "a":
                     case "i":
@@ -46,8 +46,14 @@ namespace ConsoleApp1
 
             Console.WriteLine("Array sorting");
             Class1.arraySorting();
+
+            //array comparison
             Class1.arrayComparison();
 
+            //Check the string is palindrome or not
+
+            Class1 obj = new Class1();
+            Console.WriteLine(obj.checkPalindrom());
         }
     }
 }

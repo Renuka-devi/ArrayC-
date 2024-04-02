@@ -81,5 +81,19 @@ namespace ConsoleApp1
                 Console.WriteLine("array's are not equal");
             }
         }
+
+        public string checkPalindrom()
+        {
+            Console.WriteLine("Enter a string");
+            String newString = Convert.ToString(Console.ReadLine());
+            char[] characterArray = newString.ToCharArray();
+            Array.Reverse(characterArray);
+            String ReversedString = new string(characterArray);
+            if(newString == ReversedString)
+            {
+                return "String is palindrom";
+            }
+            return "String is not palindrom";
+        }
     }
 }
