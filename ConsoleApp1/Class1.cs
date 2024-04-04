@@ -128,6 +128,10 @@ namespace ConsoleApp1
                 Console.WriteLine(val);
             }
         }
+        public virtual int getNumber()
+        {
+            return 5;
+        }
     }
 
     //Inheritance in samenamespace
@@ -146,5 +150,14 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Salary: " + salary + "Year of experience: " + yearOfExp);
         }
+
+        //Method overriding
+        public override int getNumber()
+        {
+            //base keyword
+            base.getNumber();
+            return 10;
+        }
+        
     }
 }

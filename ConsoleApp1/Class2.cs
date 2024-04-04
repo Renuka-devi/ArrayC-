@@ -38,7 +38,5 @@ namespace NewConsole
         {
             // Constructor body, if needed
         }
-
-
     }
 }

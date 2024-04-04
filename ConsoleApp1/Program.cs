@@ -103,6 +103,21 @@ namespace ConsoleApp1
             //inheritObj1.unquieOfString()
             inheritObj1.checkPalindrom();
 
+            // method overriding
+            Console.WriteLine("The number is: " + inheritObj1.getNumber());
+
+
+            //ABSTRACT
+
+            DerievedClass abstractObj = new DerievedClass();
+            abstractObj.customMethod();
+            abstractObj.newAbstractMethod();
+            Console.WriteLine("The number is " + abstractObj.newAbstractMethod1());
+
+            Employees emp = new Employees("BLACK");
+            emp.display();
+            emp.show();
+
         }
     }
 
@@ -122,6 +137,20 @@ namespace ConsoleApp1
 
         public int X { 
             get => x; set => x = value; 
+        }
+    }
+
+    // abstract class same namespace
+    class DerievedClass : newAbstract
+    {
+        public override void newAbstractMethod()
+        {
+            Console.WriteLine("override abstract");
+        }
+
+        public override int newAbstractMethod1()
+        {
+            return 5;
         }
     }
 }
