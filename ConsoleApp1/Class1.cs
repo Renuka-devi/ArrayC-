@@ -103,6 +103,7 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Hello I am RENUKA");
             string sentence = "Hello I am RENUKA";
+            //split the string usning split function 
             string[] splittedArray = sentence.Split(' ');
             return splittedArray.Length;
         }
@@ -111,14 +112,17 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Enter a String");
             string newString1 = Convert.ToString(Console.ReadLine());
+            // Convert string to array
             char [] newArray = newString1.ToCharArray();
             // Create a HashSet using HashSet class
             HashSet<char> uniqueHashSet = new HashSet<char>();
             foreach (char x in newArray)
             {
+                //adding unique element to the hashset
                 uniqueHashSet.Add(x);
             }
 
+            // get the element of hashset using foreach
             foreach (var val in uniqueHashSet)
             {
                 Console.WriteLine(val);

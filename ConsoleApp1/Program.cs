@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NewConsole;
 
 namespace ConsoleApp1
 {
     class Program
     {
+        //private filed
+        private string department = "IT";
         static void Main(string[] args)
         {
 
@@ -62,6 +65,45 @@ namespace ConsoleApp1
             //get unqiue characters of a string
 
             Class1.unquieOfString();
+
+            // Creating object for Employee class and using the properties
+            //same namespace
+            Employee objs = new Employee();
+            Console.WriteLine("id: " + objs.id + ", name: " + objs.name + ", email: " + objs.email);
+
+            Program program = new Program();
+            Console.WriteLine("Department: " + program.department);
+
+            // create a class in another namespace
+
+            Console.WriteLine("using class from different namespace");
+            Class2 newObj = new Class2(10, "23563256325");
+            Console.WriteLine("id: " + newObj.id + ", name: " + newObj.name + ", email: " + newObj.email);
+
+            newObj.getAgePhone();
+
+            SetterGetter Xobj = new SetterGetter();
+            Xobj.X = 100;
+            Console.WriteLine("Get value: " + Xobj.X);
+        }
+    }
+
+    // Define a class Employee with fields id,name,email,department
+
+    class Employee
+    {
+        // declaring new properties at Employee class
+        public int id = 10;
+        public string name = "Renuka"; public string email = "renuka@gmail.com";
+
+    }
+
+    class SetterGetter
+    {
+        private int x;
+
+        public int X { 
+            get => x; set => x = value; 
         }
     }
 }
