@@ -90,10 +90,18 @@ namespace ConsoleApp1
 
             NewConsole.Class3 inheritObj = new Class3(25, "236542555");
             inheritObj.getAgePhone();
+            string email = inheritObj.email;
+            Console.WriteLine("Email Inherited from Class2" + email);
+            inheritObj.Gender1 = "FEMALE";
+            Console.WriteLine("GENDER: " + inheritObj.Gender1);
+
 
             // Inherit Class4 from Class1 (same namespace)
             Class4 inheritObj1 = new Class4(10000.500m, 3.5m);
             inheritObj1.getDetails();
+            // We can't access the uniqueOfString function, Because static method can't access in instance reference.
+            //inheritObj1.unquieOfString()
+            inheritObj1.checkPalindrom();
 
         }
     }
