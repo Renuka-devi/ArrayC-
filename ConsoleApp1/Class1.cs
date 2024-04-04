@@ -113,7 +113,7 @@ namespace ConsoleApp1
             Console.WriteLine("Enter a String");
             string newString1 = Convert.ToString(Console.ReadLine());
             // Convert string to array
-            char [] newArray = newString1.ToCharArray();
+            char[] newArray = newString1.ToCharArray();
             // Create a HashSet using HashSet class
             HashSet<char> uniqueHashSet = new HashSet<char>();
             foreach (char x in newArray)
@@ -127,6 +127,24 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(val);
             }
+        }
+    }
+
+    //Inheritance in samenamespace
+
+    class Class4 : Class1
+    {
+        public decimal salary; private decimal yearOfExp;
+
+        public Class4(decimal salary, decimal yearOfExp)
+        {
+            this.salary = salary;
+            this.yearOfExp = yearOfExp;
+        }
+
+        public void getDetails()
+        {
+            Console.WriteLine("Salary: " + salary + "Year of experience: " + yearOfExp);
         }
     }
 }

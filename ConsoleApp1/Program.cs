@@ -85,6 +85,16 @@ namespace ConsoleApp1
             SetterGetter Xobj = new SetterGetter();
             Xobj.X = 100;
             Console.WriteLine("Get value: " + Xobj.X);
+
+            //Inheritance
+
+            NewConsole.Class3 inheritObj = new Class3(25, "236542555");
+            inheritObj.getAgePhone();
+
+            // Inherit Class4 from Class1 (same namespace)
+            Class4 inheritObj1 = new Class4(10000.500m, 3.5m);
+            inheritObj1.getDetails();
+
         }
     }
 
