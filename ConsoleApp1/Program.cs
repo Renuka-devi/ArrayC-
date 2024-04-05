@@ -130,7 +130,27 @@ namespace ConsoleApp1
             loggerObj.log("Program", "newmethod", "Constraint violation");
             loggerObj.log("Program", "Constraint violation");
             loggerObj.log("Constraint violation");
-            loggerObj.log("Program", "newmethod", "Constraint violation","05-04-2024");
+            loggerObj.log("Program", "newmethod", "Constraint violation", "05-04-2024");
+
+            //Interface
+
+            FaceRecognitionAuthentication faceAuthObj = new FaceRecognitionAuthentication();
+            if(faceAuthObj.authenticate() == true)
+            {
+                Console.WriteLine("Face Recognition Authentication Completed.");
+            }
+
+            PasswordAuthentication passwordAuthObj = new PasswordAuthentication();
+            if (passwordAuthObj.authenticate() == true)
+            {
+                Console.WriteLine("Password Authentication Completed.");
+            }
+
+            FingerPrintAuthentication fingerAuthObj = new FingerPrintAuthentication();
+            if(fingerAuthObj.authenticate() == true)
+            {
+                Console.WriteLine("Finger Print Authentication Completed.");
+            }
         }
     }
 
