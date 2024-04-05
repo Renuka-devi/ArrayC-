@@ -124,6 +124,13 @@ namespace ConsoleApp1
             bankObj1.Balance = 100000.00;
             bankObj.interestOfBalance();
 
+            //Method overloading
+
+            Logger loggerObj = new Logger();
+            loggerObj.log("Program", "newmethod", "Constraint violation");
+            loggerObj.log("Program", "Constraint violation");
+            loggerObj.log("Constraint violation");
+            loggerObj.log("Program", "newmethod", "Constraint violation","05-04-2024");
         }
     }
 
