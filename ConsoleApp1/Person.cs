@@ -45,7 +45,7 @@ namespace ConsoleApp1
         //reimplementing the method with new keyword
         public new void show()
         {
-            Console.WriteLine("Age: " + age + "color: " + color);
+            Console.WriteLine("Age: " + age + ", color: " + color);
         }
     }
 }

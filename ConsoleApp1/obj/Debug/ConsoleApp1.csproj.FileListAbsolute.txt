@@ -1,0 +1,7 @@
+D:\Renuka\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Renuka\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Renuka\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Renuka\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Renuka\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Renuka\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Renuka\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

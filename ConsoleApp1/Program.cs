@@ -118,6 +118,12 @@ namespace ConsoleApp1
             emp.display();
             emp.show();
 
+            SavingsAccount bankObj = new SavingsAccount("110110abc", "Renuka");
+            CurrentAccount bankObj1 = new CurrentAccount("110100abc", "Akhil");
+            bankObj.Balance = 1000.50;
+            bankObj1.Balance = 100000.00;
+            bankObj.interestOfBalance();
+
         }
     }
 
