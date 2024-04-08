@@ -135,7 +135,7 @@ namespace ConsoleApp1
             //Interface
 
             FaceRecognitionAuthentication faceAuthObj = new FaceRecognitionAuthentication();
-            if(faceAuthObj.authenticate() == true)
+            if (faceAuthObj.authenticate() == true)
             {
                 Console.WriteLine("Face Recognition Authentication Completed.");
             }
@@ -147,9 +147,33 @@ namespace ConsoleApp1
             }
 
             FingerPrintAuthentication fingerAuthObj = new FingerPrintAuthentication();
-            if(fingerAuthObj.authenticate() == true)
+            if (fingerAuthObj.authenticate() == true)
             {
                 Console.WriteLine("Finger Print Authentication Completed.");
+            }
+
+            program.DividedByZero();
+        }
+
+        public void DividedByZero()
+        {
+            Console.WriteLine("Enter the firsrt number");
+            int fNum = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the second number");
+            int sNum = Convert.ToInt32(Console.ReadLine());
+
+            try
+            {
+                decimal result = fNum / sNum;
+                Console.WriteLine(fNum + " Divided by " + sNum + " is " + result);
+            } catch (FormatException e)
+            {
+                Console.WriteLine("Exception: " + e);
+            } catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e);
+
             }
         }
     }
