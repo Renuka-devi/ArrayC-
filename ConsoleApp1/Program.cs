@@ -153,6 +153,9 @@ namespace ConsoleApp1
             }
 
             program.DividedByZero();
+
+            User userObj = new User(10,"Renuka","renukagma.com","1");
+            userObj.validate();
         }
 
         public void DividedByZero()
@@ -173,6 +176,19 @@ namespace ConsoleApp1
             } catch (Exception e)
             {
                 Console.WriteLine("Exception: " + e);
+                Console.WriteLine("Enter a non zero number");
+                int newNum = Convert.ToInt32(Console.ReadLine());
+                if (fNum != newNum)
+                {
+                    decimal divisionResult = fNum / newNum;
+                    Console.WriteLine(fNum + " Divided by " + newNum + " is " + divisionResult);
+                }
+                else
+                {
+                    Console.WriteLine("Can't use " + newNum + " for division");
+                    Console.WriteLine("Can't use " + newNum + " for division");
+
+                }
 
             }
         }

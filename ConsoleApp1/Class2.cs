@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using ConsoleApp1;
 
 namespace NewConsole
 {
@@ -37,6 +39,38 @@ namespace NewConsole
         public Class3(int age, string phone) : base(age, phone)
         {
             // Constructor body, if needed
+        }
+    }
+
+    class User
+    {
+        int userId;  string name; string email; string mobile;
+        public User(int userId, string name, string email, string mobile)
+        {
+            this.userId = userId;
+            this.name = name;
+            this.email = email;
+            this.mobile = mobile;
+        }
+
+        public void validate()
+        {
+            //var result = Regex.IsMatch(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            var result = Regex.IsMatch(email, @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$");
+
+            var phoneNumRegex = Regex.IsMatch(mobile, @"^\d{ 5} ([- ] *)\d{ 6}$");
+
+            if(result == false)
+            {
+                throw new CustomExceptionClass("Email Not Match");
+            } else if(phoneNumRegex == false)
+            {
+                throw new CustomExceptionClass("Mobile Not Match");
+            } else
+            {
+                Console.WriteLine("name " + name + ", Email " + email + ", Phone number " + mobile);
+            }
+
         }
     }
 }
