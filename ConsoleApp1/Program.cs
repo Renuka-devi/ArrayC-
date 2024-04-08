@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -154,8 +155,26 @@ namespace ConsoleApp1
 
             program.DividedByZero();
 
-            User userObj = new User(10,"Renuka","renukagma.com","1");
+            User userObj = new User(10,"Renuka","renuka@gmail.com","22222221");
             userObj.validate();
+
+            //Array List
+
+            Users usersObj1 = new Users("renuka1",1);
+            Users usersObj2 = new Users("renuka2", 2);
+            Users usersObj3 = new Users("renuka3", 3);
+            Users usersObj4 = new Users("renuka4", 4);
+
+            ArrayList newArrayList = new ArrayList();
+
+            newArrayList.Add(usersObj1);
+            newArrayList.Add(usersObj2);
+            newArrayList.Add(usersObj3);
+            newArrayList.Add(usersObj4);
+            foreach(var singleArrayList in newArrayList)
+            {
+                Console.WriteLine(singleArrayList);
+            }
         }
 
         public void DividedByZero()

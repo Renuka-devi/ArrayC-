@@ -160,4 +160,19 @@ namespace ConsoleApp1
         }
         
     }
+    class Users
+    {
+        public string name;
+        public int id;
+
+        public Users(string name, int id)
+        {
+            this.name = name;
+            this.id = id;
+        }
+        public void toString()
+        {
+            Console.WriteLine("id " + id + ", name: " + name);
+        }
+    }
 }

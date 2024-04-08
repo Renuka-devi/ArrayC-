@@ -10,6 +10,6 @@ namespace ConsoleApp1
     {
         public CustomExceptionClass(string message) : base(message) {
         }
-
+        
     }
 }
