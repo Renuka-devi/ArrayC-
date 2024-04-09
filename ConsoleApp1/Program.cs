@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NewConsole;
+using System.IO;
 
 namespace ConsoleApp1
 {
@@ -14,6 +15,20 @@ namespace ConsoleApp1
         private string department = "IT";
         static void Main(string[] args)
         {
+            //File Handling
+            // Text writer
+
+
+            /*using (TextWriter writer = File.CreateText(@"C:\Users\xminds\Documents\renuka.txt"))
+            {
+                writer.WriteLine("Sample Doc for Text writer");
+            }*/
+
+            using (TextReader textReader = File.OpenText(@"C:\Users\xminds\Documents\renuka.txt"))
+            {
+                Console.WriteLine(textReader.ReadLine());
+            }
+                /*Console.WriteLine("Data written successfully...");*/
 
             //Search vowels from a given character array
 
@@ -155,12 +170,12 @@ namespace ConsoleApp1
 
             program.DividedByZero();
 
-            User userObj = new User(10,"Renuka","renuka@gmail.com","22222221");
+            User userObj = new User(10,"Renuka","renuka@gmail.com");
             userObj.validate();
 
             //Array List
 
-            Users usersObj1 = new Users("renuka1",1);
+            Users usersObj1 = new Users("renuka1", 1);
             Users usersObj2 = new Users("renuka2", 2);
             Users usersObj3 = new Users("renuka3", 3);
             Users usersObj4 = new Users("renuka4", 4);
@@ -171,10 +186,14 @@ namespace ConsoleApp1
             newArrayList.Add(usersObj2);
             newArrayList.Add(usersObj3);
             newArrayList.Add(usersObj4);
-            foreach(var singleArrayList in newArrayList)
+            foreach (var singleArrayList in newArrayList)
             {
                 Console.WriteLine(singleArrayList);
             }
+
+            obj.hashTable();
+
+            obj.stack();
         }
 
         public void DividedByZero()

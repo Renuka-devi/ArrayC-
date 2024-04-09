@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,58 @@ namespace ConsoleApp1
 {
     class Class1
     {
+        public void hashTable()
+        {
+            //Hash table
+
+            Hashtable newHashTable = new Hashtable();
+            newHashTable.Add("India", "New Delhi");
+            newHashTable.Add("US", "Washington, D.C");
+            newHashTable.Add("Afghanistan", "Kabul");
+            newHashTable.Add("Canada", "Ottawa");
+            newHashTable.Add("Colombia", "Bogota");
+
+            foreach (DictionaryEntry de1 in newHashTable)
+            {
+                Console.WriteLine("Country {0} and Capital {1} ", de1.Key, de1.Value);
+            }
+
+            // Removing the particular country
+            var country = "India";
+            newHashTable.Remove(country);
+
+            //updating the particular country
+
+            var updatingCountry = "Colombia";
+
+            if(newHashTable.ContainsKey(updatingCountry))
+            {
+                newHashTable[updatingCountry] = "Bogotaaa";
+            }
+
+            foreach (DictionaryEntry de in newHashTable)
+            {
+                Console.WriteLine("Country {0} and Capital {1} ", de.Key, de.Value);
+
+            }
+        }
+
+        public void stack()
+        {
+            Stack stack = new Stack();
+            stack.Push("Ramesh");
+            stack.Push("Akhil");
+            stack.Push("Vishnu");
+
+            foreach(var singleStack in stack)
+            {
+                Console.WriteLine("{0}", singleStack);
+            }
+            Console.WriteLine("count of stack elements: {0}", stack.Count);
+            Console.WriteLine("Ramesh in the stack {0}", stack.Contains("Ramesh"));
+            Console.WriteLine("Top most element is {0}", stack.Peek());
+            Console.WriteLine(stack.Pop());
+        }
         public static void getPositiveNegativeNumbers()
         {
             int[] numbers = { 2, 8, 6, -5, 4, -36 };
@@ -170,9 +223,9 @@ namespace ConsoleApp1
             this.name = name;
             this.id = id;
         }
-        public void toString()
+        public override string ToString()
         {
-            Console.WriteLine("id " + id + ", name: " + name);
+            return "User: " + name + " " + id;
         }
     }
 }

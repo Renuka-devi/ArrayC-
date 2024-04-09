@@ -44,13 +44,12 @@ namespace NewConsole
 
     class User
     {
-        int userId;  string name; string email; string mobile;
-        public User(int userId, string name, string email, string mobile)
+        int userId;  string name; string email;
+        public User(int userId, string name, string email)
         {
             this.userId = userId;
             this.name = name;
             this.email = email;
-            this.mobile = mobile;
         }
 
         public void validate()
@@ -58,17 +57,17 @@ namespace NewConsole
             //var result = Regex.IsMatch(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
             var result = Regex.IsMatch(email, @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$");
 
-            var phoneNumRegex = Regex.IsMatch(mobile, @"^\d{ 5} ([- ] *)\d{ 6}$");
+            //var phoneNumRegex = Regex.IsMatch(mobile, @"^\d(0|91)?[6-9][0-9]{9}$");
 
             if(result == false)
             {
                 throw new CustomExceptionClass("Email Not Match");
-            } else if(phoneNumRegex == false)
+            } /*else if(phoneNumRegex == false)
             {
                 throw new CustomExceptionClass("Mobile Not Match");
-            } else
+            }*/ else
             {
-                Console.WriteLine("name " + name + ", Email " + email + ", Phone number " + mobile);
+                Console.WriteLine("name " + name + ", Email " + email);
             }
 
         }
