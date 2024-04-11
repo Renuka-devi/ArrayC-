@@ -19,16 +19,34 @@ namespace ConsoleApp1
             // Text writer
 
 
-            /*using (TextWriter writer = File.CreateText(@"C:\Users\xminds\Documents\renuka.txt"))
+            using (TextWriter writer = File.CreateText(@"C:\Users\xminds\Documents\test.txt"))
             {
                 writer.WriteLine("Sample Doc for Text writer");
-            }*/
+            }
 
-            using (TextReader textReader = File.OpenText(@"C:\Users\xminds\Documents\renuka.txt"))
+            using (TextReader textReader = File.OpenText(@"C:\Users\xminds\Documents\test.txt"))
             {
                 Console.WriteLine(textReader.ReadLine());
             }
-                /*Console.WriteLine("Data written successfully...");*/
+
+            // Stream writer
+            using (FileStream f = new FileStream(@"C:\Users\xminds\Documents\test1.txt", FileMode.Create))
+            {
+                using (StreamWriter s = new StreamWriter(f))
+                {
+                    s.WriteLine("Stream writer and reader");
+                }
+            }
+
+            // Stream Reader
+            using (FileStream fs = new FileStream(@"C:\Users\xminds\Documents\test1.txt", FileMode.Open))
+            {
+                using (StreamReader sr = new StreamReader(fs))
+                {
+                    Console.WriteLine(sr.ReadLine());
+                }
+            }
+
 
             //Search vowels from a given character array
 
