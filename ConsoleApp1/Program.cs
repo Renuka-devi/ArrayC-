@@ -34,7 +34,8 @@ namespace ConsoleApp1
             {
                 using (StreamWriter s = new StreamWriter(f))
                 {
-                    s.WriteLine("Stream writer and reader");
+                    Console.WriteLine("Write a content to the file test1.txt");
+                    s.WriteLine(Console.ReadLine());
                 }
             }
 
